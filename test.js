@@ -34,3 +34,14 @@ tape('can be infinite', function (t) {
     t.end()
   })
 })
+
+tape('can be empty', function (t) {
+  var empty = zero(0)
+  empty.on('data', function () {
+    t.fail()
+  })
+  empty.on('end', function () {
+    t.pass()
+    t.end()
+  })
+})
