@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Stream just returns blank buffers. Like reading from /dev/zero on Unix",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "inherits": "^2.0.3",
+    "readable-stream": "^2.1.5"
+  },
   "devDependencies": {
     "concat-stream": "^1.5.2",
     "standard": "^8.5.0",
