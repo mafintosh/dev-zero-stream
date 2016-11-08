@@ -1,0 +1,25 @@
+{
+  "name": "dev-zero-stream",
+  "version": "0.0.0",
+  "description": "Stream just returns blank buffers. Like reading from /dev/zero on Unix",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "concat-stream": "^1.5.2",
+    "standard": "^8.5.0",
+    "tape": "^4.6.2"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/dev-zero-stream.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/dev-zero-stream/issues"
+  },
+  "homepage": "https://github.com/mafintosh/dev-zero-stream"
+}
