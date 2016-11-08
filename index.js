@@ -8,7 +8,9 @@ module.exports = ZeroStream
 
 function ZeroStream (length) {
   if (!(this instanceof ZeroStream)) return new ZeroStream(length)
-  this.remaining = length || Infinity
+  this.remaining = typeof length === 'number'
+    ? length
+    : Infinity
   stream.Readable.call(this)
 }
 
