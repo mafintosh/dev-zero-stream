@@ -7,7 +7,7 @@ BLANK.fill(0)
 module.exports = ZeroStream
 
 function ZeroStream (length, blank) {
-  if (!(this instanceof ZeroStream)) return new ZeroStream(length)
+  if (!(this instanceof ZeroStream)) return new ZeroStream(length, blank)
   this.remaining = typeof length === 'number'
     ? length
     : Infinity
