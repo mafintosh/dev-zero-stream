@@ -1,6 +1,6 @@
 {
   "name": "dev-zero-stream",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Stream just returns blank buffers. Like reading from /dev/zero on Unix",
   "main": "index.js",
   "dependencies": {
