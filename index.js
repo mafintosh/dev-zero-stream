@@ -6,11 +6,12 @@ BLANK.fill(0)
 
 module.exports = ZeroStream
 
-function ZeroStream (length) {
+function ZeroStream (length, blank) {
   if (!(this instanceof ZeroStream)) return new ZeroStream(length)
   this.remaining = typeof length === 'number'
     ? length
     : Infinity
+  this.blank = blank || BLANK
   stream.Readable.call(this)
 }
 
@@ -19,11 +20,11 @@ inherits(ZeroStream, stream.Readable)
 ZeroStream.prototype._read = function () {
   if (this.destroyed) return
 
-  if (this.remaining >= BLANK.length) {
-    this.remaining -= BLANK.length
-    this.push(BLANK)
+  if (this.remaining >= this.blank.length) {
+    this.remaining -= this.blank.length
+    this.push(this.blank)
   } else if (this.remaining) {
-    var last = BLANK.slice(0, this.remaining)
+    var last = this.blank.slice(0, this.remaining)
     this.remaining = 0
     this.push(last)
   } else {
