@@ -6,7 +6,7 @@ Stream just returns blank buffers. Like reading from /dev/zero on Unix.
 npm install dev-zero-stream
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/dev-zero-stream.svg?style=flat)](http://travis-ci.org/mafintosh/dev-zero-stream)
+[![build status](https://travis-ci.org/mafintosh/dev-zero-stream.svg?branch=master)](http://travis-ci.org/mafintosh/dev-zero-stream)
 
 ## Usage
 
